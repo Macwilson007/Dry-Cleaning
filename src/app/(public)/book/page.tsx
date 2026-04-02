@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { createClient } from '@/lib/supabase/client'
+import { db } from '@/lib/firebase/config'
+import { collection, addDoc } from 'firebase/firestore'
 
 export default function BookPage() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -17,18 +18,22 @@ export default function BookPage() {
     const phone = formData.get('phone')
     const service = formData.get('service')
 
-    // Normally we would insert into Supabase here.
-    // Uncomment once you have configured Supabase URL and ANON Key in .env.local
+    // Normally we would insert into Firebase Firestore here.
+    // Uncomment once you have configured your Firebase environment variables in .env.local
     /*
-    const supabase = createClient()
-    const { error } = await supabase.from('pickups').insert([
-      { name, email, phone, service_requested: service }
-    ])
-
-    if (error) {
-       setStatus('error')
-    } else {
-       setStatus('success')
+    try {
+      await addDoc(collection(db, 'pickups'), {
+        name,
+        email,
+        phone,
+        service_requested: service,
+        status: 'pending',
+        createdAt: new Date()
+      })
+      setStatus('success')
+    } catch (error) {
+      console.error(error)
+      setStatus('error')
     }
     */
     
