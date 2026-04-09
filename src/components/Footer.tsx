@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-16">
         
         <div className="flex flex-col gap-6">
-          <h2 className="font-tnrc text-4xl uppercase tracking-tight">Dry Cleaning</h2>
+          <h2 className="font-tnrc text-3xl uppercase tracking-tight">Dry Cleaning</h2>
           <div className="flex flex-col font-mono text-sm tracking-widest uppercase text-neutral-500 gap-2">
             <a href="mailto:contact@drycleaning.xyz" className="hover:text-white transition-colors">contact@drycleaning.xyz</a>
             <p>123 Premiere Ave, NY 10001</p>

@@ -50,10 +50,10 @@ export default function BookPage() {
            transition={{ duration: 0.8 }}
            className="text-center mb-16"
         >
-          <h5 className="font-mono text-neutral-400 uppercase tracking-widest text-sm mb-4">
+          <h5 className="font-mono text-neutral-400 uppercase tracking-widest text-xs mb-4">
             Schedule a Pickup
           </h5>
-          <h1 className="font-tnrc text-5xl md:text-7xl uppercase tracking-tighter">
+          <h1 className="font-tnrc text-4xl md:text-6xl uppercase tracking-tighter">
             Speak to our <br/> Care Experts.
           </h1>
         </motion.div>
@@ -65,7 +65,7 @@ export default function BookPage() {
             className="w-full p-12 border border-neutral-800 bg-neutral-900/50 rounded-2xl text-center flex flex-col items-center gap-6"
           >
             <div className="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center text-3xl font-tnrc">✓</div>
-            <h2 className="font-tnrc text-4xl uppercase tracking-tighter">Request Received</h2>
+            <h2 className="font-tnrc text-3xl uppercase tracking-tighter">Request Received</h2>
             <p className="text-neutral-400 font-sans max-w-sm">One of our specialists will contact you shortly to confirm your scheduled pickup.</p>
             <button onClick={() => setStatus('idle')} className="mt-8 uppercase font-mono tracking-widest text-xs border-b border-white pb-1 hover:text-neutral-400 hover:border-neutral-400 transition-colors">
               Book another

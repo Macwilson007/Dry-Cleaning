@@ -19,7 +19,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       {/* Main Content */}
       <main className="flex-1 overflow-auto">
         <header className="h-20 border-b border-neutral-900 bg-neutral-950 flex items-center justify-between px-8">
-          <h1 className="font-mono text-sm tracking-widest uppercase text-neutral-400">Dashboard</h1>
+          <h1 className="font-mono text-xs tracking-widest uppercase text-neutral-400">Dashboard</h1>
           <div className="flex items-center gap-4">
             <div className="w-8 h-8 bg-neutral-800 rounded-full flex items-center justify-center font-tnrc">A</div>
           </div>
